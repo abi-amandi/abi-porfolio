@@ -138,16 +138,16 @@ html {
 }
 
 .text-description {
-    max-width: 45%;
+    max-width: 35%;
     /* Reduced width of the paragraph for better layout */
     position: absolute;
-    left: 47px;
+    left: 35px;
     /* Move near to the left edge of the right pane */
-    bottom: 20px;
+    bottom: 12%;
     /* Move to the bottom of the right pane */
     z-index: 1;
     /* Lower z-index to place behind the image */
-    font-size: 1rem;
+    font-size: 0.71rem;
     /* Adjusted font size to be smaller */
     font-weight: bold;
     color: white;
