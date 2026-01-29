@@ -19,6 +19,26 @@ html {
     /* Vertical split for left side */
     width: 50%;
     height: 100%;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.left-pane::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse 100% 100% at 100% 50%, rgba(0, 150, 255, 0.5) 0%, rgba(0, 120, 255, 0.3) 30%, rgba(0, 100, 255, 0.1) 60%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.left-pane:hover::before {
+    opacity: 1;
 }
 
 .right-pane {
@@ -34,6 +54,24 @@ html {
     /* For absolute positioning of children */
     overflow: visible;
     /* Allow overflow into adjacent boxes */
+    transition: all 0.5s ease;
+}
+
+.right-pane::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse 100% 100% at 0% 50%, rgba(255, 140, 0, 0.6) 0%, rgba(255, 100, 0, 0.4) 30%, rgba(230, 80, 0, 0.2) 60%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.right-pane:hover::before {
+    opacity: 1;
 }
 
 .top-left {
