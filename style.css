@@ -83,11 +83,11 @@ html {
     position: absolute;
     top: 10px;
     /* Padding from top border */
-    right: 10px;
+    right: 50px;
     /* Padding from vertical separator */
     left: auto;
     /* Reset left */
-    max-height: 80%;
+    max-height: 40%;
     /* Ensure it fits */
     width: auto;
     z-index: 99999;
@@ -103,7 +103,7 @@ html {
     max-width: 45%;
     /* Reduced width of the paragraph for better layout */
     position: absolute;
-    left: 20px;
+    left: 47px;
     /* Move near to the left edge of the right pane */
     bottom: 20px;
     /* Move to the bottom of the right pane */
@@ -155,7 +155,7 @@ html {
     width: 20%;
     /* Set explicit width */
     height: auto;
-    z-index: 5;
+    z-index: 100000;
     mix-blend-mode: normal;
     /* Keep original colors */
 }
@@ -199,6 +199,21 @@ html {
     height: auto;
     z-index: 0;
     /* High z-index to appear on top */
+    mix-blend-mode: normal;
+    /* Keep original colors */
+}
+
+.abi-amandi-image {
+    position: absolute;
+    top: 57%;
+    right: 88%;
+    transform: translate(-50%, -50%);
+    /* Center the image perfectly */
+    width: 13%;
+    /* Set explicit width to scale up */
+    height: auto;
+    z-index: 99999;
+    /* Place on top of other elements */
     mix-blend-mode: normal;
     /* Keep original colors */
 }
