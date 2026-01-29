@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <!-- Loading Animation -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+    </div>
+    
     <div class="container">
         <div class="left-pane">
             <div class="top-left">
@@ -34,6 +39,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Hide loading screen when page is fully loaded
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.opacity = '0';
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        });
+    </script>
 </body>
 
 </html>
