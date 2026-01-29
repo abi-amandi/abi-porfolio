@@ -1,0 +1,204 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    /* Horizontal split */
+    height: 100vh;
+    width: 100%;
+}
+
+.left-pane {
+    display: flex;
+    flex-direction: column;
+    /* Vertical split for left side */
+    width: 50%;
+    height: 100%;
+}
+
+.right-pane {
+    width: 50%;
+    height: 100%;
+    background-color: #000000;
+    /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+    /* For absolute positioning of children */
+    overflow: visible;
+    /* Allow overflow into adjacent boxes */
+}
+
+.top-left {
+    height: 40%;
+    background-color: #000000;
+    /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+    /* For absolute positioning of children */
+}
+
+.floating-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    /* Fit within width */
+    max-height: 100%;
+    /* Fit within height */
+    height: auto;
+    z-index: 99999;
+    /* Highest z-index to appear on very top */
+    mix-blend-mode: normal;
+    /* Keep original colors, no blending */
+    mask-image: linear-gradient(to top, transparent 0%, black 15%), linear-gradient(to left, transparent 0%, black 15%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%), linear-gradient(to left, transparent 0%, black 15%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+}
+
+.bottom-left {
+    height: 60%;
+    background-color: #000000;
+    /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+    /* For absolute positioning of children */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 10px;
+    /* Padding from top border */
+    right: 10px;
+    /* Padding from vertical separator */
+    left: auto;
+    /* Reset left */
+    max-height: 80%;
+    /* Ensure it fits */
+    width: auto;
+    z-index: 99999;
+    /* Highest z-index to appear on top */
+    mix-blend-mode: normal;
+    /* Keep original colors */
+    transform-origin: top right;
+    transform: rotate(270deg) translateY(-100%);
+    /* Rotate 270. Local Y points Right -> translateY(-100%) moves Left. */
+}
+
+.text-description {
+    max-width: 45%;
+    /* Reduced width of the paragraph for better layout */
+    position: absolute;
+    left: 20px;
+    /* Move near to the left edge of the right pane */
+    bottom: 20px;
+    /* Move to the bottom of the right pane */
+    z-index: 1;
+    /* Lower z-index to place behind the image */
+    font-size: 1rem;
+    /* Adjusted font size to be smaller */
+    font-weight: bold;
+    color: white;
+}
+
+.bottom-left-corner-image {
+    position: absolute;
+    bottom: 90px;
+    /* Padding from bottom border */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Offset by half its width to center */
+    width: 20%;
+    /* Set explicit width */
+    height: auto;
+    z-index: 5;
+    mix-blend-mode: normal;
+    /* Keep original colors */
+}
+
+.filmmaker-image {
+    position: absolute;
+    right: 20%;
+    /* Move left from the separator line */
+    bottom: 0;
+    /* Start from the bottom */
+    max-height: 100%;
+    /* Fit within box height */
+    width: auto;
+    z-index: 10000;
+    /* Highest z-index to appear on top */
+    mix-blend-mode: normal;
+    /* Keep original colors, no blending */
+}
+
+.bottom-right-image {
+    position: absolute;
+    right: 5px;
+    /* Padding from right border */
+    bottom: 10px;
+    /* Padding from bottom border */
+    width: 20%;
+    /* Set explicit width */
+    height: auto;
+    z-index: 5;
+    mix-blend-mode: normal;
+    /* Keep original colors */
+}
+
+.right-top-left-image {
+    z-index: 10000;
+    /* Highest z-index to appear on top of everything */
+    position: absolute;
+    top: -5%;
+    left: -25%;
+    /* Move to the left side */
+    height: 90%;
+    width: auto;
+    mix-blend-mode: normal;
+    /* Keep original colors, no blending */
+}
+
+.name-icon {
+    position: absolute;
+    top: 25%;
+    /* Padding from top border */
+    right: 65%;
+    /* Padding from right border */
+    width: 250px;
+    /* Adjust size as needed */
+    height: auto;
+    z-index: 99999;
+    /* High z-index to appear on top */
+    mix-blend-mode: normal;
+    /* Keep original colors */
+}
+
+.t-shape-marketer {
+    position: absolute;
+    top: 12%;
+    /* Padding from top border */
+    right: 70%;
+    /* Padding from right border */
+    width: 210px;
+    /* Adjust size as needed */
+    height: auto;
+    z-index: 0;
+    /* High z-index to appear on top */
+    mix-blend-mode: normal;
+    /* Keep original colors */
+}
